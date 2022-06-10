@@ -1,0 +1,9 @@
+<h2>You are on Show Page</h2>
+<li><h1><%= @portfolio.title %>'s Portfolio</h1>
+<%= image_tag @portfolio.main_image if !@portfolio.main_image.nil? %>
+<hr>
+<h2><%= @portfolio.subtitle %></h2>
+<p><%= @portfolio.body%></p></li>
+<%= link_to "Edit the portfolio", edit_portfolio_path(@portfolio) , class:'btn btn-primary'%>
+<%= link_to "Delete the portfolio",  portfolio_path(@portfolio) ,method: :delete,data:{confirm:"Are you sure?"}, class:'btn btn-primary'%>
+<hr>
