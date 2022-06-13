@@ -1,0 +1,14 @@
+<h1>Listing all Portfolios</h1>
+
+<ul>
+<% @portfolios_angular.each do |p| %>
+<li><h1><%= p.title %>'s Portfolio</h1>
+<%= image_tag p.main_image if !p.main_image.nil? %>
+<hr>
+<h2><%= p.subtitle %></h2>
+<p><%= p.body%></p></li>
+<%= link_to "Edit the portfolio", edit_portfolio_path(p) , class:'btn btn-primary'%>
+<%= link_to "View the portfolio",  portfolio_path(p) , class:'btn btn-primary'%>
+<hr>
+<% end %>
+</ul>

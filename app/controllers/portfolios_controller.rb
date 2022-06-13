@@ -1,7 +1,11 @@
 class PortfoliosController < ApplicationController
     before_action :getPortfolioId, only:[:show, :edit, :update,:destroy]
     def index
-        @portfolios=Portfolio.all
+        @portfolios=Portfolio.software
+    end
+
+    def angularitems
+        @portfolios_angular=Portfolio.angular
     end
 
     def new

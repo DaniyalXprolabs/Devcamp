@@ -9,5 +9,6 @@ Rails.application.routes.draw do
       get :toggle_status  
     end
   end
+  get 'angular-items', to: 'portfolios#angularitems'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
