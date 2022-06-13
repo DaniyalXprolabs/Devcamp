@@ -44,3 +44,9 @@ end
     )
 end
 
+3.times do |technologies|
+    Technology.create(
+        name: "Technology#{technologies}",
+        portfolio_id: Portfolio.last.id
+    )
+end
