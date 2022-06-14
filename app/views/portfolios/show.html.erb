@@ -4,6 +4,12 @@
 <hr>
 <h2><%= @portfolio.subtitle %></h2>
 <p><%= @portfolio.body%></p></li>
+<h2>Technologies Used</h2>
+<ol>
+<% @portfolio.technologies.each do |t|  %>
+<li><%=t.name%></li>
+<% end %>
+</ol>
 <%= link_to "Edit the portfolio", edit_portfolio_path(@portfolio) , class:'btn btn-primary'%>
 <%= link_to "Delete the portfolio",  portfolio_path(@portfolio) ,method: :delete,data:{confirm:"Are you sure?"}, class:'btn btn-primary'%>
 <hr>
