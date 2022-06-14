@@ -57,6 +57,6 @@ class PortfoliosController < ApplicationController
     end
 
     def getPortfolioId
-        @portfolio=Portfolio.find(params[:id])
+        @portfolio=Portfolio.friendly.find(params[:id])
     end
 end
